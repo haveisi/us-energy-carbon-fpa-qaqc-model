@@ -75,6 +75,18 @@ These checks reduce the risk of misleading cost estimates and support defensible
 
 ---
 
+## Financial Interpretation
+
+- Total cost = Electricity Cost + Carbon Cost  
+- Carbon cost share (%) highlights exposure to policy-driven risk  
+- High carbon share indicates vulnerability to carbon pricing  
+
+This enables prioritization of sites for:
+- decarbonization investments  
+- operational efficiency improvements  
+
+---
+
 ## Data Sources
 
 - Portfolio electricity cost dataset (processed)
@@ -136,16 +148,7 @@ It shows how sustainability data translates into:
 - cost exposure
 - transition risk
 - operational decision-making
-
----
-
-## Next Steps
-
-- Add carbon cost share (%) by site to identify policy-sensitive assets  
-- Integrate eGRID emission factors for Scope 2 accuracy  
-- Expand scenarios (low, mid, high carbon pricing)  
-- Build an interactive dashboard (Power BI or Streamlit)
-
+  
 ---
 
 ## Author
