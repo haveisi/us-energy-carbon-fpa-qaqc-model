@@ -151,6 +151,15 @@ It shows how sustainability data translates into:
   
 ---
 
+## Limitations
+
+- Carbon pricing is based on simplified scenario assumptions  
+- Emission factors are state-level averages and may not reflect facility-specific energy mixes  
+- Results are intended for comparative analysis, not regulatory reporting
+
+- ---
+
+
 ## Author
 
 Hadi Veisi  
