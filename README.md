@@ -16,11 +16,11 @@ The objective is to translate energy and emissions data into financially materia
 ## Key Findings
 
 - Top cost exposure site  
-  DC_VA_01 → ~$1.8M total annual cost  
+  DC_VA_01 → ~$1.8M annual total cost  
   Driven by both high electricity demand and carbon cost contribution
 
 - Transition risk concentration  
-  Industrial and data center sites (VA, TX, IL) show significant cost increases under carbon pricing scenarios (greater than 30%)
+  Industrial and data center sites (VA, TX, IL) show significant cost increases under carbon pricing scenarios (>30%)
 
 - Lower exposure sites  
   Smaller facilities (e.g., FARM_WI_01) remain primarily electricity-driven with limited carbon cost impact
@@ -29,11 +29,11 @@ The objective is to translate energy and emissions data into financially materia
 
 ## Analytical Insight
 
-Electricity costs dominate baseline operations across all sites. However, carbon pricing significantly alters cost structures for high-load, high-emission facilities.
+Electricity costs dominate baseline operations across all sites. However, carbon pricing materially alters cost structures for high-load, high-emission facilities.
 
 This creates two distinct exposure profiles:
-- Operational cost exposure → electricity-driven
-- Transition risk exposure → emissions and policy-driven
+- Operational cost exposure → electricity-driven  
+- Transition risk exposure → emissions and policy-driven  
 
 This distinction supports:
 - ESG reporting (Scope 2 and transition risk)
@@ -41,7 +41,6 @@ This distinction supports:
 - Decarbonization strategy development
 
 ---
-
 ## Visualization
 
 ### Portfolio Transition Cost Exposure
@@ -51,6 +50,28 @@ This distinction supports:
 This visualization separates:
 - Electricity cost (baseline)
 - Carbon cost (policy-driven impact under mid scenario)
+
+---
+
+## Methodology
+
+- Aggregated portfolio-level electricity costs from processed datasets  
+- Applied carbon pricing to estimate transition-related cost exposure  
+- Structured data with QA/QC checks to ensure consistency and completeness  
+- Generated site-level comparisons to identify high-risk assets  
+
+---
+
+## QA/QC Checks
+
+This project includes basic data quality controls to ensure reliability of financial outputs:
+
+- Verified no missing values in key fields (electricity_cost, emissions)
+- Checked for duplicate site entries
+- Ensured all cost values are positive and within expected ranges
+- Validated aggregation consistency (site-level → portfolio totals)
+
+These checks reduce the risk of misleading cost estimates and support defensible ESG reporting.
 
 ---
 
@@ -72,6 +93,7 @@ us-energy-carbon-fpa-qaqc-model/
 │   └── state_electricity_prices_qc.csv  
 
 ├── src/  
+│   ├── main.py  
 │   └── plot_cost_breakdown.py  
 
 ├── outputs/  
@@ -81,7 +103,6 @@ us-energy-carbon-fpa-qaqc-model/
 └── README.md  
 
 ---
-
 ## How to Run
 
 Navigate to project:
@@ -93,6 +114,7 @@ Run the script:
 .\.venv\Scripts\python.exe src\plot_cost_breakdown.py
 
 ---
+
 
 ## Tools & Methods
 
