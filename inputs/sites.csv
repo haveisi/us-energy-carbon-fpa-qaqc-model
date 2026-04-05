@@ -1,0 +1,6 @@
+site_id,state,sector,annual_kwh
+DC_TX_01,TX,industrial,12000000
+MFG_IL_01,IL,industrial,8500000
+OFF_CA_01,CA,commercial,2200000
+FARM_WI_01,WI,industrial,1400000
+DC_VA_01,VA,industrial,15000000
