@@ -1,67 +1,64 @@
-# Multi-Site Energy Cost, Emissions & Carbon Risk Model (QA/QC Driven)
+# ESG Cost Exposure Model: Electricity + Carbon Pricing
 
 ## Overview
-This project develops an audit-ready analytics model to quantify electricity cost exposure, emissions, and carbon pricing risk across a multi-site U.S. facility portfolio.
 
-It integrates QA/QC validation with financial modeling to translate raw energy data into decision-relevant cost and risk insights.
+This project models electricity cost exposure across a multi-site portfolio and evaluates how carbon pricing affects total operating costs.
 
----
+It integrates:
+- Electricity cost (baseline operational expense)
+- Carbon pricing scenarios (transition risk)
+- QA/QC-validated datasets
 
-## Why This Matters
-Organizations face increasing exposure to:
-- Electricity price volatility  
-- Carbon pricing and climate policy  
-- Data quality risks in ESG reporting  
-
-This model demonstrates how to move from raw data to validated, financially meaningful outputs.
+The objective is to translate energy and emissions data into **financially material ESG risk insights**.
 
 ---
 
-## Key Insights
+## Key Findings
 
-- Top cost exposure site  
-  DC_VA_01 → $1.37M annual electricity cost
+- **Top cost exposure site**  
+  DC_VA_01 → ~$1.8M total annual cost  
+  Driven by both high electricity demand and carbon cost contribution
 
-- Highest climate-adjusted risk  
-  Industrial sites in high-emission states show more than 30% cost increases under carbon pricing scenarios
+- **Transition risk concentration**  
+  Industrial and data center sites (VA, TX, IL) show significant cost increases under carbon pricing scenarios (greater than 30%)
 
----
-
-## Model Components
-
-### QA/QC Validation Layer
-- Identifies missing or inconsistent values  
-- Recalculates electricity price from sales and revenue  
-- Flags abnormal price values  
-- Assigns confidence scores  
-
-Ensures outputs are defensible and suitable for reporting and decision-making.
+- **Lower exposure sites**  
+  Smaller facilities (e.g., FARM_WI_01) remain primarily electricity-driven with limited carbon cost impact
 
 ---
 
-### Electricity Cost Modeling
-- Computes weighted state-level electricity prices  
-- Applies pricing to site-level consumption  
-- Estimates annual electricity cost per facility  
+## Analytical Insight
+
+Electricity costs dominate baseline operations across all sites. However, carbon pricing significantly alters cost structures for high-load, high-emission facilities.
+
+This creates two distinct exposure profiles:
+- **Operational cost exposure** → electricity-driven
+- **Transition risk exposure** → emissions and policy-driven
+
+This distinction supports:
+- ESG reporting (Scope 2 and transition risk)
+- Capital allocation and prioritization
+- Decarbonization strategy development
 
 ---
 
-### Emissions Estimation
-- Maps facilities to state-level emission factors  
-- Calculates site-level CO₂ emissions  
+## Visualization
+
+### Portfolio Transition Cost Exposure
+
+![Electricity vs Carbon Cost](outputs/portfolio_transition_cost_exposure.png)
+
+This visualization separates:
+- Electricity cost (baseline)
+- Carbon cost (policy-driven impact under mid scenario)
 
 ---
 
-### Carbon Pricing Integration
-- Applies multiple carbon pricing scenarios  
-- Converts emissions into financial exposure  
-- Produces climate-adjusted cost estimates  
+## Data Sources
 
----
-
-### Portfolio Risk Ranking
-- Ranks sites by cost exposure, emissions, and carbon cost  
-- Identifies high-risk assets under transition scenarios  
+- Portfolio electricity cost dataset (processed)
+- State-level electricity price data (QA/QC validated)
+- Carbon pricing scenario (mid-case assumption)
 
 ---
 
